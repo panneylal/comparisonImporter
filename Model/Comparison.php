@@ -10,8 +10,13 @@ class Comparison{
     }
 
 	public function save($data){
-		
-		/* Tu się zapisze mi do bazy :] */
+	
+            $model->name = $data['product_id'];
+            $model->name = $data['name'];
+            $model->name = $data['description'];
+            $model->name = $data['created_at'];
+            $model->name = $data['updated_at'];     
+            $model->name = $data['url'];    
 
 	}
 	
