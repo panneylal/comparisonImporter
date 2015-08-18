@@ -22,9 +22,13 @@ class Comparison{
 	public function startParsing($urlFile){
         
 		$xmltoparse = file_gets_contents($urlFile);
-		save($xmltoparse);
+		if (save($xmltoparse)){
 		syslog(LOG_INFO, "Save records: END");
-		
+		return "Saved!";
+		}else{
+			return "Saving error!";
+			syslog(LOG_ERR, "SAVING ERROR");
+		}
     }
 
 }
