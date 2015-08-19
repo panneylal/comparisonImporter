@@ -11,24 +11,23 @@ class Comparison{
 
 	public function save($data){
 	
-            $model->name = $data['product_id'];
             $model->name = $data['name'];
-            $model->name = $data['description'];
-            $model->name = $data['created_at'];
-            $model->name = $data['updated_at'];     
-            $model->name = $data['url'];    
+            $model->description = $data['description'];
+            $model->created_at = $data['created_at'];
+            $model->updated_at = $data['updated_at'];     
+            $model->url = $data['url'];    
 
 	}
 	
 	public function startParsing($urlFile){
         
-		$xmltoparse = file_gets_contents($urlFile);
-		if (save($xmltoparse)){
-		syslog(LOG_INFO, "Save records: END");
+            $xmltoparse = file_get_contents($urlFile);
+            return $this->getRecords($xmltoparse);
+            /*if (save($xmltoparse)){
 		return "Saved!";
-		}else{
-			return "Saving error!";
-		}
+            }else{
+		return "Saving error!";
+            }*/
     }
 
 }
