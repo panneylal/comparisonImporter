@@ -19,15 +19,15 @@ class Comparison{
 
 	}
 	
-	public function startParsing($urlFile){
+	public function init($urlFile){
         
+        $size = strlen(file_get_contents($urlFile))/1048576;
+        if ($size > 0.11 && $size < 2000.00 ){
             $xmltoparse = file_get_contents($urlFile);
+            $this->save();
+            
             return $this->getRecords($xmltoparse);
-            /*if (save($xmltoparse)){
-		return "Saved!";
-            }else{
-		return "Saving error!";
-            }*/
+        }else echo "Błędny rozmiar pliku: Dopuszczalny przedział od 500mb do 2gb.";
     }
 
 }
