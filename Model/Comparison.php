@@ -22,7 +22,7 @@ class Comparison{
 	public function init($urlFile){
         
         $size = strlen(file_get_contents($urlFile))/1048576;
-        if ($size > 0.11 && $size < 2000.00 ){
+        if ($size > 500.00 && $size < 2000.00 ){
             $xmltoparse = file_get_contents($urlFile);
             $this->save();
             

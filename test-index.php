@@ -19,6 +19,6 @@ if($apikey == $secretkey){
 
         $dane = New Comparison;
         print_r($dane->init($urlFile));
-        echo "Memory Usage: " . (memory_get_usage()/1048576) . " MB \n";
+        echo "Memory Usage: " . memory_get_usage()/1048576 . " MB \n";
     }
-}else echo "Klucz API nieprawidłowy";
+}else {echo "Klucz API nieprawidłowy";}
