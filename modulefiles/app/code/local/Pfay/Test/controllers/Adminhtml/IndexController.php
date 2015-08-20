@@ -15,7 +15,7 @@ class Pfay_Test_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Acti
       public function editAction()
       {
            $testId = $this->getRequest()->getParam('id');
-           $testModel = Mage::getModel('test/test')->load($testId);
+           $testModel = Mage::getModel('test/test')->load($testId)->limit(20);
            if ($testModel->getId() || $testId == 0)
            {
              Mage::register('test_data', $testModel);
