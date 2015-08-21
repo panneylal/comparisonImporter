@@ -1,0 +1,12 @@
+    <frontend>
+        <routers>
+            <magentos>
+                <use>standard</use>
+                <args>
+                    <module>comparisonImporter</module>
+                    <frontName>Comparison Importer</frontName>
+                </args>
+            </magentos>
+        </routers>
+         
+    </frontend>
